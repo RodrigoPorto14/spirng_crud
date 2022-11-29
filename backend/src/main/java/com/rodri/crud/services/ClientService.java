@@ -2,6 +2,7 @@ package com.rodri.crud.services;
 
 import javax.persistence.EntityNotFoundException;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
@@ -18,6 +19,7 @@ import com.rodri.crud.services.exceptions.ResourceNotFoundException;
 @Service
 public class ClientService {
 
+	@Autowired
 	private ClientRepository repository;
 	
 	@Transactional(readOnly=true)
